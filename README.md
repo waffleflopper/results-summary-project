@@ -22,7 +22,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solutions/results-summary-component-uwDahwsbuL](https://www.frontendmentor.io/solutions/results-summary-component-uwDahwsbuL)
 - Live Site URL: [https://waffleflopper.github.io/results-summary-project](https://your-live-site-url.com)
 
 ## My process
