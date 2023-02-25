@@ -1,0 +1,26 @@
+$min-width: 375px;
+$red: hsl(0, 100%, 67%);
+$orange: hsl(39, 100%, 56%);
+$green: hsl(166, 100%, 37%);
+$blue: hsl(234, 85%, 45%);
+
+$slate: hsl(252, 100%, 67%);
+$royal: hsl(241, 81%, 54%);
+$violet: hsla(256, 72%, 46%, 1);
+$persian: hsla(241, 72%, 46%, 0);
+
+$white: hsl(0, 0%, 100%);
+$pale_blue: hsl(221, 100%, 96%);
+$lavender: hsl(241, 100%, 89%);
+$gray_blue: hsl(244, 30%, 27%);
+
+$font-size: 18px;
+$family: "Hanken Grotesk";
+
+@mixin bg-gradient($c1, $c2) {
+  background-image: linear-gradient(180deg, $c1, $c2);
+}
+
+* {
+  box-sizing: border-box;
+}
