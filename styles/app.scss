@@ -153,9 +153,16 @@ button {
   width: 315px;
   text-align: center;
   border-radius: 40px;
-  font-size: 18px;
+  font-size: $font-size;
   letter-spacing: 1;
   align-self: center;
+  &:hover {
+    @include bg-gradient($slate, $royal);
+    cursor: pointer;
+  }
+  &:active {
+    @include bg-gradient($royal, $slate);
+  }
 }
 
 .red {
