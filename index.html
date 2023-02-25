@@ -16,17 +16,6 @@
       href="./assets/images/favicon-32x32.png" />
 
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -42,52 +31,45 @@
           You scored higher than 65% of the people who have taken these tests.
         </div>
       </div>
-      <div class="summary-content">
+      <div
+        class="summary-content">
         <h3>Summary</h3>
-        <div class="result-item red">
+
+        <!-- example of what js adds from data.json
+          <div class="result-item ${result.color}">
           <img
-            src="assets/images/icon-reaction.svg"
-            alt="reaction icon" />
-          <span class="category">Reaction</span>
+            src="${result.icon}"
+            alt="${result.category} icon" />
+          <span class="category">${result.category}</span>
 
-          <span class="score">80 </span><span class="total">/ 100</span>
-        </div>
-        <div class="result-item orange">
-          <img
-            src="assets/images/icon-memory.svg"
-            alt="memory icon" />
-          <span class="category">Memory</span>
-
-          <span class="score"> 92 </span><span class="total">/ 100</span>
-        </div>
-        <div class="result-item green">
-          <img
-            src="assets/images/icon-verbal.svg"
-            alt="verbal icon" />
-          <span class="category">Verbal </span>
-
-          <span class="score">61 </span><span class="total">/ 100</span>
-        </div>
-        <div class="result-item blue">
-          <img
-            src="assets/images/icon-visual.svg"
-            alt="visual icon" />
-          <span class="category">Visual</span>
-
-          <span class="score">72 </span><span class="total">/ 100</span>
-        </div>
-
+          <span class="score">${result.score} </span><span class="total">/ 100</span>
+        </div> -->
+        <div id="breakdown"></div>
         <button>Continue</button>
       </div>
-    </main>
+    <script>
+      const dynamic = document.getElementById("breakdown");
 
-    <div class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Robert Baddeley</a>.
-    </div>
+      if (dynamic) {
+        fetch("./data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((result) => {
+              dynamic.innerHTML += `
+              <div class="result-item ${result.color}">
+          <img
+            src="${result.icon}"
+            alt="${result.category} icon" />
+          <span class="category">${result.category}</span>
+
+          <span class="score">${result.score} </span><span class="total">/ 100</span>
+        </div>
+
+              `;
+            });
+          })
+          .catch((error) => console.log(error));
+      }
+    </script>
   </body>
 </html>
