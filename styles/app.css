@@ -43,11 +43,7 @@ main {
 .overall-score {
   width: 100%;
   margin: 0;
-  background-image: linear-gradient(
-    180deg,
-    hsl(252, 100%, 67%),
-    hsl(241, 81%, 54%)
-  );
+  background-image: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   color: hsl(241, 100%, 89%);
   display: flex;
   flex-direction: column;
@@ -71,11 +67,7 @@ main {
   justify-content: center;
   align-items: center;
   color: hsl(252, 100%, 67%);
-  background-image: linear-gradient(
-    180deg,
-    hsl(256, 72%, 46%),
-    hsla(241, 72%, 46%, 0)
-  );
+  background-image: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
 }
 .overall-score .percentage figure {
   all: unset;
@@ -177,5 +169,11 @@ button {
 }
 
 .attribution {
+  font-size: 11px;
+  text-align: center;
   margin-top: 5px;
-} /*# sourceMappingURL=app.css.map */
+}
+
+.attribution a {
+  color: hsl(244, 30%, 27%);
+}/*# sourceMappingURL=app.css.map */

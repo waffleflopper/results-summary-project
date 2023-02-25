@@ -182,6 +182,12 @@ button {
     color: $blue;
   }
 }
+
 .attribution {
+  font-size: 11px;
+  text-align: center;
   margin-top: 5px;
+}
+.attribution a {
+  color: $gray_blue;
 }
